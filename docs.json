@@ -18,7 +18,7 @@
   },
   "navigation": {
     "pages": [
-      { "group": "Overview", "pages": ["introduction"] },
+      { "group": "Overview", "pages": ["index"] },
       { "group": "Getting Started", "pages": ["getting-started/creating-your-account","getting-started/completing-your-profile","getting-started/navigating-the-dashboard","getting-started/notifications"] },
       { "group": "Animals", "pages": ["animals/adding-managing-animals","animals/health-records","animals/breeding-records","animals/genetics-breeding-predictor","animals/dairy-production","animals/growth-records","animals/fiber-shearing","animals/semen-ai-inventory","animals/show-entries","animals/pedigree-tree","animals/transferring-ownership"] },
       { "group": "Account", "pages": ["account/subscription-plans"] },
