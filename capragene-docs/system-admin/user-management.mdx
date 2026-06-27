@@ -1,0 +1,64 @@
+---
+title: User Management & Roles
+description: Managing all platform users, roles, and access as a system administrator.
+---
+
+## Accessing the admin panel
+
+1. Sign in with an admin account.
+2. From the sidebar, click **Admin** or navigate to `/admin`.
+3. The admin panel provides access to all platform-level settings.
+
+## Reviewing access requests
+
+When new users submit a **Request Access** form from the landing page:
+
+1. Go to **Admin → Access Requests**.
+2. Review each request (name, email, organisation, role, message).
+3. If approved, use the user management tools to create or unlock their account and notify them.
+
+An email notification is automatically sent to all admin users when a new access request is submitted.
+
+## Viewing all users
+
+1. In the admin panel, click **Users**.
+2. The user list shows all registered accounts, their email, username, join date, and admin status.
+
+## Promoting a user to admin
+
+1. Find the user in the list.
+2. Click their name to open their admin profile.
+3. Toggle the **Admin** switch to on.
+4. Confirm the change.
+
+<Warning>
+  Admin users have access to all platform settings, all user data, and all organisations. Only grant admin access to trusted individuals.
+</Warning>
+
+## Blocking a user
+
+If a user needs to be suspended:
+
+1. Find the user in the admin user list.
+2. Click **Block User**.
+3. Confirm the action.
+
+A blocked user cannot sign in. Their data is retained. You can unblock them at any time.
+
+## Impersonating a user (support mode)
+
+Admins can view the system as a specific user for support purposes:
+
+1. Find the user in the admin panel.
+2. Click **Impersonate**.
+3. The session switches to that user's view. A banner appears at the top of the screen indicating you are in support mode.
+4. Click **End Impersonation** to return to your admin account.
+
+## Global registries (super admin)
+
+Super admins can access the full registries management page at `/admin/registries`:
+
+- View all registries across all organisations
+- Create new registries and assign them to organisations
+- Review all pending registration submissions globally
+- Activate or deactivate registries

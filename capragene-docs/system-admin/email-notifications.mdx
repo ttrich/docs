@@ -1,0 +1,62 @@
+---
+title: Email & Notification Settings
+description: Configuring the email system and notification preferences as a system administrator.
+---
+
+## Setting up email (SMTP)
+
+CapraGene sends transactional emails (registration approvals, DNA notifications, access requests, etc.) via SMTP:
+
+1. In the admin panel, go to **Tools → Email Settings**.
+2. Enter your SMTP configuration:
+   - Host
+   - Port
+   - Secure (TLS) — on for port 465, off for port 587
+   - Username
+   - Password
+   - From name and from email address
+3. Click **Save**.
+4. Use the **Send Test Email** button to verify the configuration is working.
+
+<Note>
+  Each environment (development and production) has its own database and therefore its own saved SMTP settings. You need to configure email separately in each environment.
+</Note>
+
+## Managing email templates
+
+All system emails use customisable templates:
+
+1. In the admin panel, click **Email Templates**.
+2. Select the template you want to edit (e.g., Registration Approved, DNA Required).
+3. Edit the subject line and HTML body.
+4. Use merge tags like `{{animal_name}}`, `{{registry_name}}`, `{{user_first_name}}` — these are replaced automatically when the email is sent.
+5. Click **Save Template**.
+
+Available templates include: Registration Submitted, Registration Approved, Registration Rejected, DNA Required, DNA Submitted, DNA Verified, Membership Welcome, Transfer Request, Subscription Activated, Payment Failed.
+
+## Email branding
+
+Emails are automatically branded based on context:
+
+- **Organisation emails** (registry notifications, transfer requests, membership) use the sending organisation's logo and accent colour in the header.
+- **Platform emails** (subscription, payment notifications) use the CapraGene platform branding.
+
+Organisation branding is pulled automatically from the organisation's settings — no extra configuration is needed.
+
+## Sending a broadcast announcement
+
+To send an announcement to platform users:
+
+1. In the admin panel, go to **Tools → Announcements**.
+2. Write your announcement:
+   - **Title** — shown as the heading in both the email and in-app notification
+   - **Body** — rich HTML content using the built-in editor
+3. Select the **audience**:
+   - All users
+   - Admins only
+   - Specific roles (select one or more from the list)
+4. Click **Preview** to see how the announcement will look before sending.
+5. The Send button shows how many users will receive it (e.g., "Send to 47").
+6. Click **Send**.
+
+Recipients receive the announcement as an **in-app notification** visible via the bell icon.

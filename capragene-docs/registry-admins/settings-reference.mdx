@@ -1,0 +1,36 @@
+---
+title: Registry Settings Reference
+description: Complete reference for registry and organisation configuration options.
+---
+
+## Currency settings
+
+Each registry can be configured with its own currency. Supported currencies: **AUD**, **NZD**, **USD**, **GBP**, and **EUR**. This is selected from a dropdown when creating the registry or editing registry settings — free-text entry is not accepted.
+
+Organisation records also have a currency field (used for membership fees and show entry fees) which follows the same five-currency constraint.
+
+## Stripe Connect integration
+
+To collect registration fees or show entry fees, your organisation needs to connect to Stripe:
+
+1. Go to organisation settings.
+2. Click **Connect with Stripe**.
+3. Follow the Stripe onboarding steps to connect your bank account.
+4. Once connected, fees will be collected at registration submission and transferred to your account after the platform fee.
+
+## Join mode
+
+Each organisation has a **Join Mode** setting:
+
+| Mode | Behaviour |
+|---|---|
+| Open | Any CapraGene user can join from the Membership Hub |
+| Invite Only | Members can only be added by an organisation admin |
+
+## Annual fee
+
+If your organisation charges annual membership, set the **Annual Fee** and **Currency** in organisation settings. This amount is shown to prospective members in the Membership Hub.
+
+## Duplicate detection
+
+CapraGene automatically checks all incoming registration submissions for duplicate microchips or names across registries. Flags appear as yellow warning banners in the review panel. The registrar should manually review any flagged submission.

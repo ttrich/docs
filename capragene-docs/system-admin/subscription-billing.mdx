@@ -1,0 +1,58 @@
+---
+title: Subscription & Billing
+description: Managing subscription plans and user billing as a system administrator.
+---
+
+## Subscription plans
+
+CapraGene offers tiered subscription plans for breeders:
+
+| Plan | Who it is for |
+|---|---|
+| Starter (Free) | Hobby breeders wanting basic herd management |
+| Breeder | Active breeders needing registry submissions and health records |
+| Stud Pro | Professional studs requiring genetics tools, AI inventory, and advanced features |
+
+Plans are configured in the admin panel:
+
+1. Go to **Admin → Subscription Plans**.
+2. View existing plans or click **Create Plan**.
+3. Set the plan name, billing interval (monthly or annual), and feature entitlements.
+
+## International pricing
+
+CapraGene supports five currencies. Each plan has a separately configured price per currency:
+
+| Currency | Region |
+|---|---|
+| AUD | Australia |
+| NZD | New Zealand |
+| GBP | United Kingdom |
+| EUR | European countries |
+| USD | All other regions (global fallback) |
+
+To configure prices for each currency:
+
+1. Go to **Admin → Subscription Plans**.
+2. Click on a plan.
+3. Go to the **Prices** tab.
+4. Set the monthly and annual price for each currency.
+
+## How currency is assigned to users
+
+A user's currency is determined automatically by their **country** setting in Account Settings. The subscription page shows their local currency with a note indicating which country it is based on.
+
+Users cannot manually override their currency. This is intentional — Stripe locks a customer's billing currency on their first payment, so allowing overrides would create inconsistencies.
+
+If a user has not set a country, an amber notice appears on the subscription page prompting them to update their Account Settings before subscribing.
+
+## Viewing active subscriptions
+
+1. In **Admin → Subscriptions**, click the **Active** tab.
+2. View all active subscriber accounts, their plan, and renewal dates.
+
+## Stripe configuration
+
+Subscription billing is processed through Stripe. Subscriptions are synced to the database automatically via webhooks — no manual management is required in most cases.
+
+Contact your hosting administrator if Stripe webhook or key configuration needs to be updated.

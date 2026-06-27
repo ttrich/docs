@@ -1,0 +1,73 @@
+---
+title: Setting Up a Registry
+description: Creating and configuring a breed registry within CapraGene.
+---
+
+## Creating a registry
+
+1. From the sidebar, go to **Organisation Admin → Registries** tab.
+2. Click **Create Registry**.
+3. Fill in the registry details:
+   - **Registry Name**
+   - **Species** (Goat, Dog, Horse)
+   - **Allowed Breeds** — select which breeds are eligible
+   - **Description**
+4. Click **Save**.
+
+## Configuring fees
+
+Each registry can charge a registration fee:
+
+1. Open the registry settings.
+2. Go to the **Fees** section.
+3. Enter the fee amount and select the currency.
+4. Click **Save**.
+
+Fees are collected via Stripe at the time of registration submission. To receive these payments, connect a Stripe account in your organisation settings (see [Registry Settings Reference](/registry-admins/settings-reference)).
+
+## Configuring registration numbers
+
+CapraGene automatically assigns sequential registration numbers based on your format:
+
+1. In registry settings, find the **Numbering** section.
+2. Set:
+   - **Prefix** (e.g., CGX, AAAA)
+   - **Format** (default: `{PREFIX}-{YEAR}-{SEQ}`)
+   - **Starting sequence number**
+3. Click **Save**.
+
+Example result: `CGX-2025-0001`
+
+## Configuring DNA requirements
+
+Set whether DNA parentage testing is required for registration:
+
+1. In registry settings, go to **DNA Verification Rules**.
+2. Select one of:
+   - **Not Required** — no DNA testing needed
+   - **Optional** — DNA testing is encouraged but not mandatory; verified animals receive a tier badge
+   - **Required** — animals must pass DNA verification before registration can be approved
+3. Optionally set a **grace period** (days) and enter a list of **approved laboratories** (one per line).
+4. Click **Save**.
+
+## Membership gate
+
+To require breeders to be members before submitting:
+
+1. In registry settings, enable **Requires Membership**.
+2. Breeders without an active membership in your organisation will be blocked from submitting and directed to the Membership Hub.
+
+This is also enforced server-side — the system rejects submissions from non-members even if the UI check is bypassed.
+
+## Public registry page
+
+Every registry has a publicly accessible search page at `/registry/{id}`. This page:
+- Requires no login to access
+- Shows all approved animals in the registry
+- Is searchable by name, microchip, or registration number
+- Is sortable by name, registration number, or breed
+- Displays each animal's DNA trust tier badge
+
+To find the public URL:
+1. Go to **Organisation Admin → Registries**.
+2. Find your registry and click **Public Search →** to open it.
